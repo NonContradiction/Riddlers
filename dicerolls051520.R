@@ -1,3 +1,7 @@
+#This puzzle required the knowledge of combinatorics and probability; 
+#the R coding enumerated the sample space, and also simulated different dice rolls 
+#and visualized theoretical and empirical sample data with ggplot2.
+
 #We install a package with functions for discrete uniform numbers: 
 #install.packages("extraDistr")
 library(extraDistr)

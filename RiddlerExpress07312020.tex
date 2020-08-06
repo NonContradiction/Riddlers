@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt,twoside]{book}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[colorlinks]{hyperref}
+\pagestyle{headings}
+
+\title{Riddler Classic, 7-31-2020}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+The problem is viewable \href{https://fivethirtyeight.com/features/can-you-cheat-at-rock-paper-scissors/}{here}.
+
+Your chance is 1--i.e., you will win! Because every round falls into one of three categories. Either your opponent is about to play rock or paper (the fact that it's with equal probability between those two is actually beside the point)--in which case, play paper! Either you win or there is a tie and you go on and play another round. Similarly if they are about to play paper or scissors, play scissors--you either win or draw to play again. And if they are about to play scissors or rock, play the superior rock. The worst outcome of a given round is that you tie. And you can't go on tie-ing literally forever--probability theory excludes that outcome. Namely, it's the value of $$ \lim_{n -> \infty} \left( \frac{1}{2} \right)^{n} = 0.$$
+
+Note that even if every round you perceive that, instead of a 50/50 chance between two options, you notice your opponent will play one option with $1\%$ chance and a stronger option (which you must therefore play to ensure a tie or better) with $99\%$ chance, then it is still true that 
+
+$$ \lim_{n -> \infty} \left( \frac{99}{100} \right)^{n} = 0.$$
+
+Which is why the fact that there is equal probability is irrelevant to your chance of a correct strategy resulting in a win.
+
+At this point I might draw a diagram to visualize this correct strategy, but virtually any existing graph describing the game (such as Wikipedia's \href{https://en.wikipedia.org/wiki/Rock_paper_scissors#/media/File:Rock-paper-scissors.svg}{image}) will do. For any pair of possibilities that your opponent might play, identify the edge between those two, and then select the node from which the arrow originates.
+
+\end{document}
